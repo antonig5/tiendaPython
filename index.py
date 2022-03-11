@@ -60,23 +60,32 @@ if opc in "vender":
         name2 = input("por favor dijite su nombre\r\n")
         lastname2 = input("por favor digite su apellido\r\n")
 
-        if cant < 1:
-            print("cuales productos desea vender",
-                  "arroz", cantidad1, "leche", cantidad2)
-            cantv5 = int(input("arroz"))
-            cantv6 = int(input("leche"))
-            ven3 = cantidad1 - cantv5
-            ven4 = cantidad2 - cantv6
-            descontar = total1 * 0.3
-            fin2 = total2-descontar
-            print(fin2, ven3, ven4)
+        def cand1():
+            global cant
 
-        else:
+        def cand2():
+            global cant2
 
-            print("cuales productos desea vender",
-                  "azucar", precio1, "panela", precio2, "arroz", cant, "leche", cant2)
+        def cand3():
+            global cantidad1
+
+        def cand4():
+            global cantidad2
+
+        if cand3 or cand1 == None:
+            print("azucar", precio3, "panela", precio4)
             cantv1 = int(input("azucar"))
             cantv2 = int(input("panela"))
+            t1 = precio3 * cantv1
+            t2 = precio4 * cantv2
+            t3 = t1+t2
+            descontar1 = t3 * 0.3
+            fin3 = t3 - descontar1
+            print(fin3, t1, t2)
+
+            print("cuales productos desea vender",
+                  "arroz", cant, "leche", cant2)
+
             cantv3 = int(input("arroz"))
             cantv4 = int(input("leche"))
             ven1 = cant - cantv3
@@ -84,5 +93,16 @@ if opc in "vender":
             descontar = total1 * 0.3
             fin = total1-descontar
             print(fin, ven1, ven2)
+
+        else:
+            print("cuales productos desea vende",
+                  "arroz", cantidad1, "leche", cantidad2)
+            cantv5 = int(input("arroz"))
+            cantv6 = int(input("leche"))
+            ven3 = cantidad1 - cantv5
+            ven4 = cantidad2 - cantv6
+            descontar = total2 * 0.3
+            fin2 = total2-descontar
+            print(fin2, ven3, ven4)
 
         break
