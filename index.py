@@ -84,11 +84,12 @@ if opc in "vender":
         t1 = precio3 * cantv1
         t2 = precio4 * cantv2
         t3 = t1+t2
-        descontar1 = t3 * 0.3
+        descontar1 = t3 / 1.3 * 0.3
         fin3 = t3 - descontar1 / 1.19 * 0.19
         print("factura" "\r\n", "Vendedor", name2, lastname2, "\r\n", "Celular", phone1, "\r\n", "Productos vendidos",
               "\r\n", "panela", cantv2, "\r\n", "azucar", cantv1, "\r\n", "IVA: 19%)", "\r\n", "total", round(fin3))
         break
+
 # por si el usuario decide salir del sistema
 else:
     print("usted a salido del sistema")
